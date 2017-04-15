@@ -171,13 +171,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-    background-image: url('../images/header-bg2.jpg');
+    background-image: url('../images/header-bg2.png');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
     @include background-cover;
     text-align: center;
-    color: white;
+    color: $theme-text;
     .intro-text {
         padding-top: 100px;
         padding-bottom: 50px;
