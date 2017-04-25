@@ -8,7 +8,7 @@ function getDate(month) {
 }
 
 function nextMeeting() {
-  var result = getDate(moment());
+  /*var result = getDate(moment());
   var dur = result.diff(moment);
 
   if (dur < 0) {
@@ -16,9 +16,11 @@ function nextMeeting() {
   }
 
   var meeting = result.subtract(5.5, 'hours');
-  meeting.add(1, 'second');
+  meeting.add(1, 'second');*/
 
-  $('.next').text(meeting.format('dddd, MMMM Do YYYY, h:mm:ss a') + ' EST');
+  var meeting = moment("2017-05-10 18:00:00");
+
+  $('.next').text(meeting.format('dddd, MMMM Do YYYY, h:mm:ss a'));
 
   $('.countdown').downCount({
     date: meeting.add(4, 'hours').format(),
