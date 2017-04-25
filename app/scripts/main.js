@@ -18,7 +18,7 @@ function nextMeeting() {
   var meeting = result.subtract(5.5, 'hours');
   meeting.add(1, 'second');*/
 
-  var meeting = moment("2017-05-10 18:00:00");
+  var meeting = moment('2017-05-10 18:00:00');
 
   $('.next').text(meeting.format('dddd, MMMM Do YYYY, h:mm:ss a'));
 
