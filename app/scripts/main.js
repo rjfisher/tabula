@@ -1,8 +1,16 @@
 function getDate(month) {
-  // Get the first Thursday of the month.
-  var result = month.startOf('month').day('Thursday');
-  // Add a week to get the second Thursday of the month.
-  result.add(1, 'week');
+  // Get the first Wednesday of the month.
+  var result = month.startOf('month');
+
+  // If the first day of the month is after Wednesday we have a
+  // problem
+  if (result.day() > 3) {
+    result.add(1, 'week');
+  }
+
+  // Get the first wednesday of the month
+  result.day('Wednesday');
+
   // Add 18.5 hours to set the date
   result.add(18, 'hours');
 
