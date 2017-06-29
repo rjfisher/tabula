@@ -5,10 +5,10 @@ function getDate(month) {
   // If the first day of the month is after Wednesday we have a
   // problem
   if (result.day() > 3) {
-    result.add(2, 'week');
+    result.add(3, 'week');
   }
 
-  // Get the first wednesday of the month
+  // Get the first wednesday of the week
   result.day('Wednesday');
 
   // Add 18.5 hours to set the date
