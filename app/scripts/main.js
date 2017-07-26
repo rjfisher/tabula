@@ -6,6 +6,9 @@ function getDate(month) {
   // problem
   if (result.day() > 3) {
     result.add(3, 'week');
+  } else {
+    result.add(-3, 'day');
+    result.add(3, 'week');
   }
 
   // Get the first wednesday of the week
